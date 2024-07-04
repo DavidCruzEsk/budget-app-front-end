@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Transactions = () => {
     const [transactions, setTransactions] = useState([]);
@@ -8,7 +8,7 @@ const Transactions = () => {
     useEffect(() => {
         fetch(API)
             .then(res => {
-                res.json();
+                return res.json();
             })
             .then(data => {
                 setTransactions(data);
@@ -23,9 +23,11 @@ const Transactions = () => {
             <ul>
                 {transactions.map((trans, index) => {
                     const { item_name } = trans;
-                    <li key={index}>
-                        <Link>{item_name}</Link>
-                    </li>
+                    return (
+                        <li key={index}>
+                            <Link to={`/transactions/${index}`}>{item_name}</Link>
+                        </li>
+                    )
                 })}
             </ul>
         </div>

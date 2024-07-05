@@ -50,19 +50,19 @@ const New = () => {
                 <legend>New Transaction Form</legend>
 
                 <label htmlFor="item-name">Item name: </label><br/>
-                <input onChange={handleChange} id='item-name' name='item_name' type="text" placeholder='Item Name' required/>
+                <input onChange={handleChange} id='item-name' name='item_name' type="text" placeholder='Item Name' required/><br/><br/>
 
-                <label htmlFor="amount">Amount: </label>
-                <input onChange={handleChange} id='amount' name='amount' type="number" placeholder='Amount' required/>
+                <label htmlFor="amount">Amount: </label><br/>
+                <input onChange={handleChange} id='amount' name='amount' type="number" placeholder='Amount' required/><br/><br/>
 
-                <label htmlFor="date">Date: </label>
-                <input onChange={handleChange} id='date' name='date' type="text" placeholder='Date /mm/dd/yyyy' required/>
+                <label htmlFor="date">Date: </label><br/>
+                <input onChange={handleChange} id='date' name='date' type="text" placeholder='Date /mm/dd/yyyy' required/><br/><br/>
 
-                <label htmlFor="buyer">Buyer: </label>
-                <input onChange={handleChange} id='buyer' name='from' type="text" placeholder='Buyer Name / Employer Name' required/>
+                <label htmlFor="buyer">Buyer: </label><br/>
+                <input onChange={handleChange} id='buyer' name='from' type="text" placeholder='Buyer Name / Employer Name' required/><br/><br/>
 
-                <label htmlFor="category">Category: </label>
-                <input  onChange={handleChange} id='category' name='category' type="text" placeholder='stocks / checkings / savings / retail' required/>
+                <label htmlFor="category">Category: </label><br/>
+                <input  onChange={handleChange} id='category' name='category' type="text" placeholder='stocks / checkings / savings / retail' required/><br/><br/>
 
                 <input type="submit" />
             </fieldset>

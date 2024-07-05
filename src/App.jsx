@@ -13,6 +13,7 @@ import Footer from './Components/Footer';
 import SuccessNew from './Pages/SuccessNew';
 import SuccessEdit from './Pages/SuccessEdit';
 import SuccessDelete from './Pages/SuccessDelete';
+import EmptyForm from './Pages/EmptyForm';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           <Route path='/success-new' element={<SuccessNew />}/>
           <Route path='/success-edit' element={<SuccessEdit />}/>
           <Route path='/success-delete' element={<SuccessDelete />}/>
+          <Route path='/emptyForm' element={<EmptyForm />}/>
           <Route path='*' element={<FourOFour />}/>
       </Routes>
       <Footer />

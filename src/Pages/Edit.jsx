@@ -49,7 +49,7 @@ const Edit = () => {
                 })
                 .then(data => {
                     console.log(data);
-                    navigate('/success-edit');
+                    navigate('/transactions');
                 })
                 .catch(error => {
                     console.error(error);

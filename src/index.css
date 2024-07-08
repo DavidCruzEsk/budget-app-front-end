@@ -10,8 +10,14 @@ li {
     list-style-type: none;
 }
 
+ nav a:link, nav a:visited, nav a:hover, nav a:active {
+    color: white;
+    text-decoration: none; /* Optional: to remove underline */
+}
+
 a {
-    text-decoration: none;
+    color: black;
+    text-decoration: none; /* Optional: to remove underline */
 }
 
 nav, nav ul {
@@ -26,4 +32,11 @@ nav {
 
 nav ul li {
     margin: 5px;
+}
+
+.account-link {
+    background-color: rgb(235, 242, 242);
+    padding: 3px 20px;
+    border-top-right-radius: 20px;
+    border: 1px solid black;
 }

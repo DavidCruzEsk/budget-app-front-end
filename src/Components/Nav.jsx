@@ -1,22 +1,6 @@
-import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const Nav = () => {
-    const [transactions, setTransactions] = useState([]);
-    const API = import.meta.env.VITE_BASE_URL;
-
-    useEffect(() => {
-        fetch(API)
-            .then(res => {
-                return res.json();
-            })
-            .then(data => {
-                setTransactions(data);
-            })
-            .catch(error => {
-                console.error(error);
-            })
-    }, []);
+const Nav = ({ transactions }) => {
 
     function grossSumOfAllAccounts() {
         let grossSum = 0;

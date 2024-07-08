@@ -32,7 +32,7 @@ const Show = () => {
             })
             .then(data => {
                 console.log('Data deleted:',data);
-                navigate(`/success-delete`);
+                navigate(`/transactions`);
             })
             .catch(error => {
                 console.error(error);
@@ -42,20 +42,22 @@ const Show = () => {
     return (
         <div className='show-div'>
             <h1 className='show-header'>Show Page</h1>
-            <ul className='show-ul'>
-                <li  className='show-li'>{item_name}</li>
-                <li  className='show-li'>{`Amount: ${amount}`}</li>
-                <li  className='show-li'>{`Purchase date: ${date}`}</li>
-                <li  className='show-li'>{`Buyer: ${from}`}</li>
-                <li  className='show-li'>{`Category: ${category}`}</li>
-            </ul>
-            
-            <div className='showButtons'>
-                <button className='buttons-inShow' onClick={() => navigate( - 1)}>Back</button>
-                <Link to={`/transactions/${index}/edit`}>
-                    <button className='buttons-inShow'>Edit</button>
-                </Link>
-                <button className='buttons-inShow' onClick={() => deleteTransData()}>Delete</button>
+            <div className='show-content'>
+                <ul className='show-ul'>
+                    <li  className='show-li'>{item_name}</li>
+                    <li  className='show-li'>{`Amount: ${amount}`}</li>
+                    <li  className='show-li'>{`Purchase date: ${date}`}</li>
+                    <li  className='show-li'>{`Buyer: ${from}`}</li>
+                    <li  className='show-li'>{`Category: ${category}`}</li>
+                </ul>
+                
+                <div className='showButtons'>
+                    <button className='buttons-inShow' onClick={() => navigate( - 1)}>Back</button>
+                    <Link to={`/transactions/${index}/edit`}>
+                        <button className='buttons-inShow'>Edit</button>
+                    </Link>
+                    <button className='buttons-inShow' onClick={() => deleteTransData()}>Delete</button>
+                </div>
             </div>
         </div>
     );

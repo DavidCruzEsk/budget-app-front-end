@@ -1,4 +1,5 @@
 import './App.css';
+import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Nav from './Components/Nav';
@@ -16,13 +17,28 @@ import SuccessDelete from './Pages/SuccessDelete';
 import EmptyForm from './Pages/EmptyForm';
 
 function App() {
+  const [transactions, setTransactions] = useState([]);
+  const API = import.meta.env.VITE_BASE_URL;
+
+  useEffect(() => {
+      fetch(API)
+          .then(res => {
+              return res.json();
+          })
+          .then(data => {
+              setTransactions(data);
+          })
+          .catch(error => {
+              console.error(error);
+          })
+  }, [transactions]);
 
   return (
     <div className='container'>
-      <Nav />
+      <Nav transactions={transactions}/>
       <Routes>
           <Route path='/' element={<Home />}/>
-          <Route path='/transactions' element={<Transactions />}/>
+          <Route path='/transactions' element={<Transactions transactions={transactions} />}/>
           <Route path='/transactions/:index' element={<Show />}/>
           <Route path='/transactions/new' element={<New />}/>
           <Route path='/transactions/:index/edit' element={<Edit />}/>

@@ -34,7 +34,7 @@ const New = () => {
             })
             .then(data => {
                 console.log(data);
-                navigate('/success-new');
+                navigate('/transactions');
             })
             .catch(error => {
                 console.error(error);

@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav, nav ul {
+    display: flex;
+}
+
+nav {
+    justify-content: space-between;
+    padding: 10px 100px;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 5px;
+}

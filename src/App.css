@@ -1,0 +1,141 @@
+.container {
+    height: 100vh;
+    width: 100wh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
+}
+
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.footer-ul {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 550px;
+}
+
+.home-header {
+    text-align: center;
+}
+
+.gross-header {
+    text-align: center;
+}
+
+.show-header {
+    text-align: center;
+}
+
+.showButtons {
+    margin-left: 38px;
+}
+
+.buttons-inShow {
+    margin-right: 10px;
+}
+
+.about-header {
+    text-align: center;
+}
+
+.about-ul {
+    margin-top: 140px;
+}
+
+.about-li {
+    text-align: center;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.nav-ul {
+    font-size: 20px;
+}
+
+.nav-ul li {
+    margin: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-mainHeader {
+    font-size: 30px;
+}
+
+nav {
+    background-color: rgb(235, 242, 242);
+    box-shadow: 0 5px 100px -2px lightgrey;
+}
+
+.gross-section {
+    display: flex;
+    align-items: center;
+    color: rgb(85, 83, 83);
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gross-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.grossHigherThanTenK {
+    color: green;
+}
+
+.grossLessThan0 {
+    color: red;
+}
+
+.betweenZeroandTenK {
+    color: rgb(183, 181, 65);
+}
+
+.transaction-list {
+    text-align: left;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.account {
+    margin: 20px;
+}
+
+.edit-form {
+    font-size: 22px;
+    width: 450px;
+    text-align: center;
+    align-self:center;
+    margin: auto;
+}
+
+.show-div {
+    font-size: 25px;
+}
+
+.showButtons button {
+    font-size: 15px;
+}
+
+.new-form {
+    font-size: 22px;
+    width: 450px;
+    text-align: center;
+    align-self:center;
+    margin: auto;
+}
+
+.new-submit {
+    font-size: 15px;
+    padding: 6px 4px;
+}
+
+.edit-back {
+    margin-right: 10px;
+}

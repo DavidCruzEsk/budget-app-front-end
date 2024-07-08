@@ -60,7 +60,7 @@ const Edit = () => {
     const { item_name, amount, date, from, category } = transactData;
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className='edit-form' onSubmit={handleSubmit}>
             <fieldset>
                 <legend>Edit Form</legend>
 
@@ -79,7 +79,10 @@ const Edit = () => {
                 <label htmlFor="category">{`Category: "${category}"`}</label><br/>
                 <input  onChange={handleChange} className='input' id='category' name='category' type="text" placeholder='New stocks / checkings / savings / retail' /><br/><br/>
 
+
+                <button className='edit-back' onClick={() => navigate( - 1)}>Back</button>
                 <input type="submit" />
+
             </fieldset>
         </form>
     );

@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 const SuccessEdit = () => {
     return (
         <div>
-            <h1>DATA SUCCESSFULLY EDITED</h1>
+            <h1 className='success-edit'>DATA SUCCESSFULLY EDITED</h1>
             <Link to='/transactions'>
-                <button>Transactions</button>
+                <button  className='buttons-inEdit'>Transactions</button>
             </Link>
             <Link to='/'>
-                <button>Home</button>
+                <button  className='buttons-inEdit'>Home</button>
             </Link>
         </div>
     );

@@ -1,28 +1,69 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Nav = () => {
+    const [transactions, setTransactions] = useState([]);
+    const API = import.meta.env.VITE_BASE_URL;
+
+    useEffect(() => {
+        fetch(API)
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                setTransactions(data);
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }, []);
+
+    function grossSumOfAllAccounts() {
+        let grossSum = 0;
+    
+        transactions.forEach(trans => {
+            return grossSum += trans.amount;
+        });
+
+        function grossStyleColor() {
+            if (grossSum <= 0) {
+                return 'grossLessThan0';
+            } else if (grossSum > 0 && grossSum <= 10000) {
+                return 'betweenZeroandTenK';
+            } else if (grossSum > 10000) {
+                return 'grossHigherThanTenK';
+            }
+        }
+    
+        return (
+            <section className='gross-section'>
+                <h3 className='gross-header'>
+                    <span className='gross-intro'>Gross Sum of All Accounts: </span><span className={grossStyleColor()} id='gross-number'>${grossSum}</span>
+                </h3>
+            </section>
+        )
+    }
+
     return (
-        <nav>
-            <ul>
-                <li>
-                    <Link to='/'>
-                        <h3>BudgetApp</h3>
-                    </Link>
-                </li>
+        <nav className='nav-div'>
+            <Link to='/'>
+                <h3 className='nav-mainHeader'>BudgetApp</h3>
+            </Link>
+            {grossSumOfAllAccounts()}
+            <ul className='nav-ul'>
                 <li>
                     <Link to='/transactions'>
-                        <span>Transactions</span>
+                        <span className='nav-transactions'>Transactions</span>
                     </Link>
                 </li>
                 <li>
                     <Link to='/transactions/new'>
-                        <span>New</span>
+                        <span className='nav-new'>New</span>
                     </Link>
                 </li>
                 <li>
                     <Link to='/about'>
-                        <span>About</span>
+                        <span className='nav-about'>About</span>
                     </Link>
                 </li>
             </ul>

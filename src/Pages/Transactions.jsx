@@ -18,13 +18,30 @@ const Transactions = () => {
             })
     }, []);
 
+    // function grossSumOfAllAccounts() {
+    //     let grossSum = 0;
+
+    //     transactions.forEach(trans => {
+    //         return grossSum += trans.amount;
+    //     });
+
+    //     return (
+    //         <section className='gross-section'>
+    //             <h3 className='gross-header'>
+    //                 <span className='gross-intro'>Gross Sum of All Accounts: </span><span id='gross-number'>${grossSum}</span>
+    //             </h3>
+    //         </section>
+    //     )
+    // }
+
     return (
         <div>
-            <ul>
+            {/* {grossSumOfAllAccounts()} */}
+            <ul className='transaction-list'>
                 {transactions.map((trans, index) => {
                     const { item_name } = trans;
                     return (
-                        <li key={index}>
+                        <li className='account' key={index}>
                             <Link to={`/transactions/${index}`}>{item_name}</Link>
                         </li>
                     )

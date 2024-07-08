@@ -40,22 +40,22 @@ const Show = () => {
     }
 
     return (
-        <div>
-            <h1>Show Page</h1>
-            <ul>
-                <li>{item_name}</li>
-                <li>{`Amount: ${amount}`}</li>
-                <li>{`Purchase date: ${date}`}</li>
-                <li>{`Buyer: ${from}`}</li>
-                <li>{`Category: ${category}`}</li>
+        <div className='show-div'>
+            <h1 className='show-header'>Show Page</h1>
+            <ul className='show-ul'>
+                <li  className='show-li'>{item_name}</li>
+                <li  className='show-li'>{`Amount: ${amount}`}</li>
+                <li  className='show-li'>{`Purchase date: ${date}`}</li>
+                <li  className='show-li'>{`Buyer: ${from}`}</li>
+                <li  className='show-li'>{`Category: ${category}`}</li>
             </ul>
             
             <div className='showButtons'>
-                <button onClick={() => navigate( - 1)}>Back</button>
+                <button className='buttons-inShow' onClick={() => navigate( - 1)}>Back</button>
                 <Link to={`/transactions/${index}/edit`}>
-                    <button>Edit</button>
+                    <button className='buttons-inShow'>Edit</button>
                 </Link>
-                <button onClick={() => deleteTransData()}>Delete</button>
+                <button className='buttons-inShow' onClick={() => deleteTransData()}>Delete</button>
             </div>
         </div>
     );

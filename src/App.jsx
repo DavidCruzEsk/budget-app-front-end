@@ -18,7 +18,7 @@ import EmptyForm from './Pages/EmptyForm';
 function App() {
 
   return (
-    <div>
+    <div className='container'>
       <Nav />
       <Routes>
           <Route path='/' element={<Home />}/>

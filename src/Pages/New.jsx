@@ -45,7 +45,7 @@ const New = () => {
     //BUG - When I send the wrong date format and recieve a bad request, the server claims that the "amount" data is not number, even though the amount is a number, and the actual problem is NOT the amount input type, but the date format being sent in an incorrect format.
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className='new-form' onSubmit={handleSubmit}>
             <fieldset>
                 <legend>New Transaction Form</legend>
 
@@ -64,7 +64,7 @@ const New = () => {
                 <label htmlFor="category">Category: </label><br/>
                 <input  onChange={handleChange} id='category' name='category' type="text" placeholder='stocks / checkings / savings / retail' required/><br/><br/>
 
-                <input type="submit" />
+                <input className='new-submit' type="submit" />
             </fieldset>
         </form>
     );

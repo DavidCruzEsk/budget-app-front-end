@@ -14,7 +14,7 @@ const Transactions = ({ transactions }) => {
 
     return (
         <div>
-            <h2 className='total-accounts'>Total Bank Accounts: {totalAccounts()}</h2>
+            <h2 className='total-accounts'>Total Accounts: {totalAccounts()}</h2>
             <ul className='transaction-list'>
                 {transactions.map((trans, index) => {
                     const { item_name } = trans;

@@ -104,11 +104,11 @@ nav {
 }
 
 .grossLessThan0 {
-    color: red;
+    color: rgb(133, 17, 17);
 }
 
 .betweenZeroandTenK {
-    color: lightyellow;
+    color: rgb(255, 255, 5);
 }
 
 .transaction-list {

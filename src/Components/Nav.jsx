@@ -6,7 +6,7 @@ const Nav = ({ transactions }) => {
         let grossSum = 0;
     
         transactions.forEach(trans => {
-            return grossSum += trans.amount;
+            return grossSum += Number(trans.amount);
         });
 
         function grossStyleColor() {
